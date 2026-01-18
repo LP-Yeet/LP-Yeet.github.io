@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello!</h1>
+
+  <!-- Button -->
+  <button id="myButton">Click Me</button>
+
+  <!-- Drop-down menu -->
+  <select id="myDropdown">
+    <option value="">Choose an option</option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+
+  <p id="output"></p>
+
+  <script>
+    // Button click
+    document.getElementById("myButton").addEventListener("click", function() {
+      const selected = document.getElementById("myDropdown").value;
+      if(selected) {
+        document.getElementById("output").textContent = "You selected: " + selected;
+      } else {
+        document.getElementById("output").textContent = "Hello! Please choose something from the menu.";
+      }
+    });
+  </script>
+
+</body>
+</html>
